@@ -41,6 +41,8 @@ class Song
     count_helper(@@genres)
   end
 
+  private
+  
   def self.count_helper(array)
     helper_hash = {}
     array.each do |element|
