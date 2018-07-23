@@ -26,23 +26,19 @@ class Song
     @@genres.uniq
   end
 
-  def self.genre_count # Takes in an array of genres
-    # Create a variable to store Hash
+  def self.genre_count
     count = {}
     @@genres.each do |genre|
       count.key?(genre) ? count[genre] += 1 : count[genre] = 1
     end
-    # Return accumulated Hash
     count
   end
 
   def self.artist_count
-    # Create a variable to store Hash
     count = {}
     @@artists.each do |artist|
       count.key?(artist) ? count[artist] += 1 : count[artist] = 1
     end
-    # Return accumulated Hash
     count
   end
 end
